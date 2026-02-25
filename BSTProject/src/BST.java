@@ -20,8 +20,7 @@ public class BST implements BSTInterface {
     }
 
     // ADD
-    public void add(Object obj) {
-        Comparable data = (Comparable) obj;
+    public void add(Comparable obj) {
         root = addHelper(root, data);
     }
 
@@ -41,8 +40,7 @@ public class BST implements BSTInterface {
     }
 
     // FIND
-    public boolean find(Object obj) {
-        Comparable data = (Comparable) obj;
+    public boolean find(Comparable obj) {
         return findHelper(root, data);
     }
 
@@ -60,10 +58,7 @@ public class BST implements BSTInterface {
     }
 
     // REPLACE
-    public boolean replace(Object oldObj, Object newObj) {
-        Comparable oldData = (Comparable) oldObj;
-        Comparable newData = (Comparable) newObj;
-
+    public boolean replace(Comparable oldObj, Comparable newObj) {
         boolean existed = delete(oldData);
         add(newData);
 
@@ -72,7 +67,6 @@ public class BST implements BSTInterface {
 
     // DELETE
     public boolean delete(Object obj) {
-        Comparable data = (Comparable) obj;
 
         if (!find(data))
             return false;
