@@ -21,7 +21,7 @@ public class BST implements BSTInterface {
 
     // ADD
     public void add(Comparable obj) {
-        root = addHelper(root, data);
+        root = addHelper(root, obj);
     }
 
     private TreeNode addHelper(TreeNode node, Comparable data) {
@@ -41,7 +41,7 @@ public class BST implements BSTInterface {
 
     // FIND
     public boolean find(Comparable obj) {
-        return findHelper(root, data);
+        return findHelper(root, obj);
     }
 
     private boolean findHelper(TreeNode node, Comparable data) {
@@ -59,25 +59,23 @@ public class BST implements BSTInterface {
 
     // REPLACE
     public boolean replace(Comparable oldObj, Comparable newObj) {
-        boolean existed = delete(oldData);
-        add(newData);
+        boolean existed = delete(oldObj);
+        add(newObj);
 
         return existed;
     }
 
     // DELETE
-    public boolean delete(Object obj) {
-
-        if (!find(data))
+    public boolean delete(Comparable obj) {
+        if (!find(obj))
             return false;
 
-        root = deleteHelper(root, data);
+        root = deleteHelper(root, obj);
         size--;
         return true;
     }
 
     private TreeNode deleteHelper(TreeNode node, Comparable data) {
-
         if (node == null)
             return null;
 
