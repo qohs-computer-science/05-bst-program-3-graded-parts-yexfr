@@ -2,25 +2,25 @@ public class TreeNode
 {
 	private TreeNode left;
 	private TreeNode right;
-	private Comparable value;
+	private Comparable data;
 	
 	public TreeNode(Comparable initValue)
 	{
-		value = initValue;
+		data = initValue;
 		left = null;
 		right = null;
 	}
 
 	public TreeNode(Comparable initValue, TreeNode initLeft, TreeNode initRight)
 	{
-		value = initValue;
+		data = initValue;
 		left = initLeft;
 		right = initRight;
 	}
 	
-	public Comparable getValue()
+	public Comparable getData()
 	{
-		return value;
+		return data;
 	}
 
 	public TreeNode getLeft()
@@ -33,7 +33,7 @@ public class TreeNode
 		return right;
 	}
 	
-	public void setValue(Comparable newValue)
+	public void setData(Comparable newValue)
 	{
 		value = newValue;
 	}
