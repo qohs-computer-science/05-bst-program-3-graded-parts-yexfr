@@ -1,9 +1,9 @@
 /*
- * TODO: Name
- * TODO: Date
- * TODO: Class Period
- * TODO: Program Description
- */
+    Name: Nick Griffith
+    Period; 6
+    Date: 3/2/26
+    Description: Testing our binary search tree class
+*/
 
  import java.lang.Comparable;
 
@@ -19,7 +19,7 @@
         String[] elements = {
                 "O", "R", "C", "H", "A", "R", "D",
                 "Q", "U", "I", "N", "C", "E"
-        };
+        }; // end
 
         for (String s : elements)
             tree.add(s);
@@ -54,5 +54,5 @@
         tree.printInOrder();
 
         System.out.println("\nFinal Size: " + tree.size());
-    }
-}
+    } // end main
+} // end class
